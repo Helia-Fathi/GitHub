@@ -101,7 +101,6 @@
 				FDBEF53E81F884A28CE29A26 /* Pods-ScalioTestTests.debug.xcconfig */,
 				3B7799FD1CA617FDBFD234EE /* Pods-ScalioTestTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
