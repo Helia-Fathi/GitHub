@@ -10,8 +10,10 @@
 		028BE264BB9BA223DA964B40 /* Pods_ScalioTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 506662C5AE80EFDA9DA07F0A /* Pods_ScalioTest.framework */; };
 		2A0CF391629DEA64AE76C5ED /* Pods_ScalioTest_ScalioTestUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 31FC2B593362D0BE6B6709A2 /* Pods_ScalioTest_ScalioTestUITests.framework */; };
 		909190B183F67D28F790229F /* Pods_ScalioTestTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23C9E5C7A5E9A968D23130E0 /* Pods_ScalioTestTests.framework */; };
+		AF6C14E1280B066F00482437 /* GitAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6C14E0280B066F00482437 /* GitAPI.swift */; };
+		AF6C14E3280B19FA00482437 /* GitProfileParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6C14E2280B19F900482437 /* GitProfileParser.swift */; };
+		AF6C14E6280B1DBF00482437 /* GitProfileModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6C14E5280B1DBF00482437 /* GitProfileModel.swift */; };
 		AFB76D7828076F13003D9365 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB76D7728076F13003D9365 /* AppDelegate.swift */; };
-		AFB76D7A28076F13003D9365 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB76D7928076F13003D9365 /* SceneDelegate.swift */; };
 		AFB76D7C28076F13003D9365 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB76D7B28076F13003D9365 /* ViewController.swift */; };
 		AFB76D7F28076F13003D9365 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AFB76D7D28076F13003D9365 /* Main.storyboard */; };
 		AFB76D8128076F16003D9365 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AFB76D8028076F16003D9365 /* Assets.xcassets */; };
@@ -47,9 +49,11 @@
 		506662C5AE80EFDA9DA07F0A /* Pods_ScalioTest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ScalioTest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6B3F22A94B8B6DA5E441236F /* Pods-ScalioTest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ScalioTest.debug.xcconfig"; path = "Target Support Files/Pods-ScalioTest/Pods-ScalioTest.debug.xcconfig"; sourceTree = "<group>"; };
 		9A11E9013C25EB39BCD072BC /* Pods-ScalioTest-ScalioTestUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ScalioTest-ScalioTestUITests.release.xcconfig"; path = "Target Support Files/Pods-ScalioTest-ScalioTestUITests/Pods-ScalioTest-ScalioTestUITests.release.xcconfig"; sourceTree = "<group>"; };
+		AF6C14E0280B066F00482437 /* GitAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitAPI.swift; sourceTree = "<group>"; };
+		AF6C14E2280B19F900482437 /* GitProfileParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitProfileParser.swift; sourceTree = "<group>"; };
+		AF6C14E5280B1DBF00482437 /* GitProfileModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitProfileModel.swift; sourceTree = "<group>"; };
 		AFB76D7428076F13003D9365 /* ScalioTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ScalioTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AFB76D7728076F13003D9365 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		AFB76D7928076F13003D9365 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		AFB76D7B28076F13003D9365 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		AFB76D7E28076F13003D9365 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		AFB76D8028076F16003D9365 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -104,6 +108,23 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		AF6C14DF280B062D00482437 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				AF6C14E0280B066F00482437 /* GitAPI.swift */,
+				AF6C14E2280B19F900482437 /* GitProfileParser.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		AF6C14E4280B1D6B00482437 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				AF6C14E5280B1DBF00482437 /* GitProfileModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		AFB76D6B28076F13003D9365 = {
 			isa = PBXGroup;
 			children = (
@@ -129,12 +150,13 @@
 		AFB76D7628076F13003D9365 /* ScalioTest */ = {
 			isa = PBXGroup;
 			children = (
+				AF6C14E4280B1D6B00482437 /* Model */,
+				AF6C14DF280B062D00482437 /* Networking */,
 				AFB76D7728076F13003D9365 /* AppDelegate.swift */,
-				AFB76D7928076F13003D9365 /* SceneDelegate.swift */,
 				AFB76D7B28076F13003D9365 /* ViewController.swift */,
+				AFB76D8228076F16003D9365 /* LaunchScreen.storyboard */,
 				AFB76D7D28076F13003D9365 /* Main.storyboard */,
 				AFB76D8028076F16003D9365 /* Assets.xcassets */,
-				AFB76D8228076F16003D9365 /* LaunchScreen.storyboard */,
 				AFB76D8528076F16003D9365 /* Info.plist */,
 			);
 			path = ScalioTest;
@@ -407,8 +429,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				AFB76D7C28076F13003D9365 /* ViewController.swift in Sources */,
+				AF6C14E1280B066F00482437 /* GitAPI.swift in Sources */,
+				AF6C14E6280B1DBF00482437 /* GitProfileModel.swift in Sources */,
 				AFB76D7828076F13003D9365 /* AppDelegate.swift in Sources */,
-				AFB76D7A28076F13003D9365 /* SceneDelegate.swift in Sources */,
+				AF6C14E3280B19FA00482437 /* GitProfileParser.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
