@@ -13,9 +13,10 @@
 		AF6C14E1280B066F00482437 /* GitAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6C14E0280B066F00482437 /* GitAPI.swift */; };
 		AF6C14E3280B19FA00482437 /* GitProfileParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6C14E2280B19F900482437 /* GitProfileParser.swift */; };
 		AF6C14E6280B1DBF00482437 /* GitProfileModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6C14E5280B1DBF00482437 /* GitProfileModel.swift */; };
+		AF6C14E8280C322200482437 /* userCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF6C14E7280C322100482437 /* userCell.xib */; };
+		AF6C14EA280C33F400482437 /* SearchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6C14E9280C33F400482437 /* SearchTableViewCell.swift */; };
 		AFB76D7828076F13003D9365 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB76D7728076F13003D9365 /* AppDelegate.swift */; };
-		AFB76D7C28076F13003D9365 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB76D7B28076F13003D9365 /* ViewController.swift */; };
-		AFB76D7F28076F13003D9365 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AFB76D7D28076F13003D9365 /* Main.storyboard */; };
+		AFB76D7C28076F13003D9365 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB76D7B28076F13003D9365 /* HomeViewController.swift */; };
 		AFB76D8128076F16003D9365 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AFB76D8028076F16003D9365 /* Assets.xcassets */; };
 		AFB76D8428076F16003D9365 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AFB76D8228076F16003D9365 /* LaunchScreen.storyboard */; };
 		AFB76D8F28076F17003D9365 /* ScalioTestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB76D8E28076F17003D9365 /* ScalioTestTests.swift */; };
@@ -52,10 +53,11 @@
 		AF6C14E0280B066F00482437 /* GitAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitAPI.swift; sourceTree = "<group>"; };
 		AF6C14E2280B19F900482437 /* GitProfileParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitProfileParser.swift; sourceTree = "<group>"; };
 		AF6C14E5280B1DBF00482437 /* GitProfileModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitProfileModel.swift; sourceTree = "<group>"; };
+		AF6C14E7280C322100482437 /* userCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = userCell.xib; sourceTree = "<group>"; };
+		AF6C14E9280C33F400482437 /* SearchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTableViewCell.swift; sourceTree = "<group>"; };
 		AFB76D7428076F13003D9365 /* ScalioTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ScalioTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AFB76D7728076F13003D9365 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		AFB76D7B28076F13003D9365 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		AFB76D7E28076F13003D9365 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		AFB76D7B28076F13003D9365 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		AFB76D8028076F16003D9365 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AFB76D8328076F16003D9365 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AFB76D8528076F16003D9365 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -153,11 +155,12 @@
 				AF6C14E4280B1D6B00482437 /* Model */,
 				AF6C14DF280B062D00482437 /* Networking */,
 				AFB76D7728076F13003D9365 /* AppDelegate.swift */,
-				AFB76D7B28076F13003D9365 /* ViewController.swift */,
+				AFB76D7B28076F13003D9365 /* HomeViewController.swift */,
 				AFB76D8228076F16003D9365 /* LaunchScreen.storyboard */,
-				AFB76D7D28076F13003D9365 /* Main.storyboard */,
 				AFB76D8028076F16003D9365 /* Assets.xcassets */,
 				AFB76D8528076F16003D9365 /* Info.plist */,
+				AF6C14E7280C322100482437 /* userCell.xib */,
+				AF6C14E9280C33F400482437 /* SearchTableViewCell.swift */,
 			);
 			path = ScalioTest;
 			sourceTree = "<group>";
@@ -298,9 +301,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AF6C14E8280C322200482437 /* userCell.xib in Resources */,
 				AFB76D8428076F16003D9365 /* LaunchScreen.storyboard in Resources */,
 				AFB76D8128076F16003D9365 /* Assets.xcassets in Resources */,
-				AFB76D7F28076F13003D9365 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -428,9 +431,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AFB76D7C28076F13003D9365 /* ViewController.swift in Sources */,
+				AFB76D7C28076F13003D9365 /* HomeViewController.swift in Sources */,
 				AF6C14E1280B066F00482437 /* GitAPI.swift in Sources */,
 				AF6C14E6280B1DBF00482437 /* GitProfileModel.swift in Sources */,
+				AF6C14EA280C33F400482437 /* SearchTableViewCell.swift in Sources */,
 				AFB76D7828076F13003D9365 /* AppDelegate.swift in Sources */,
 				AF6C14E3280B19FA00482437 /* GitProfileParser.swift in Sources */,
 			);
@@ -469,14 +473,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		AFB76D7D28076F13003D9365 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				AFB76D7E28076F13003D9365 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		AFB76D8228076F16003D9365 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -615,9 +611,9 @@
 				INFOPLIST_FILE = ScalioTest/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -644,9 +640,9 @@
 				INFOPLIST_FILE = ScalioTest/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
