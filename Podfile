@@ -9,6 +9,8 @@ target 'ScalioTest' do
 
     pod 'Moya/RxSwift'
 
+    pod 'SDWebImage'
+
   target 'ScalioTestTests' do
     inherit! :search_paths
     # Pods for testing
