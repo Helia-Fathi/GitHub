@@ -39,11 +39,11 @@ final class GitProfileParser {
                 case login = "login"
                 case type = "type"
                 case image = "avatar_url"
-
             }
             
             var profileModel: UserModel {
-                UserModel(login: self.login, type: self.type, imageURL: self.image)
+                
+                return UserModel(login: self.login, type: self.type, imageURL: self.image)
             }
         }
     }

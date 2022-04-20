@@ -8,9 +8,13 @@
 import Foundation
 import Moya
 
+//    https://api.github.com/search/users?q=foo%20in:login
+
+
 enum GitHub {
     case searchUsers(query: String, page: Int, pageSize: Int)
 }
+
 
 extension GitHub: TargetType {
     var baseURL: URL {
@@ -34,7 +38,9 @@ extension GitHub: TargetType {
     var task: Task {
         switch self {
         case let .searchUsers(query, page, pageSize):
-            return .requestParameters(parameters: ["q": query, "page": page, "per_page": pageSize], encoding: URLEncoding.queryString)
+
+            return .requestParameters(parameters: ["q": query, "page": page, "per_page": pageSize, "in": "login"], encoding: URLEncoding.queryString)
+            
         }
     }
     

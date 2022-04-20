@@ -6,6 +6,8 @@
 //
 
 import UIKit
+import Moya
+
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -22,11 +24,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
         window = UIWindow(frame: UIScreen.main.bounds)
         window?.makeKeyAndVisible()
+        homeViewController.viewModel = VCViewModelImpl(dataStore: GitDatas(provider: MoyaProvider<GitHub>()))
+
         
         let mainNavigationVC = UINavigationController()
         mainNavigationVC.viewControllers = [homeViewController]
         window?.rootViewController = mainNavigationVC
         
+
         return true
     }
 }
