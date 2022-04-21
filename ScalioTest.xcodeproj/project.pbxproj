@@ -15,6 +15,12 @@
 		AF6C14E6280B1DBF00482437 /* GitProfileModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6C14E5280B1DBF00482437 /* GitProfileModel.swift */; };
 		AF6C14E8280C322200482437 /* userCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF6C14E7280C322100482437 /* userCell.xib */; };
 		AF6C14EA280C33F400482437 /* SearchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6C14E9280C33F400482437 /* SearchTableViewCell.swift */; };
+		AF6C14EC280C599F00482437 /* GitData.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6C14EB280C599F00482437 /* GitData.swift */; };
+		AF6C14EE280C5DD700482437 /* Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6C14ED280C5DD700482437 /* Errors.swift */; };
+		AF6C14F0280C5F7700482437 /* ConnectivityErr.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6C14EF280C5F7700482437 /* ConnectivityErr.swift */; };
+		AF6C14F2280C8A8500482437 /* CellVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6C14F1280C8A8500482437 /* CellVM.swift */; };
+		AF6C14F4280C9A8D00482437 /* PageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6C14F3280C9A8D00482437 /* PageController.swift */; };
+		AF6C14F6280D937E00482437 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6C14F5280D937E00482437 /* HomeViewModel.swift */; };
 		AFB76D7828076F13003D9365 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB76D7728076F13003D9365 /* AppDelegate.swift */; };
 		AFB76D7C28076F13003D9365 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB76D7B28076F13003D9365 /* HomeViewController.swift */; };
 		AFB76D8128076F16003D9365 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AFB76D8028076F16003D9365 /* Assets.xcassets */; };
@@ -55,6 +61,12 @@
 		AF6C14E5280B1DBF00482437 /* GitProfileModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitProfileModel.swift; sourceTree = "<group>"; };
 		AF6C14E7280C322100482437 /* userCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = userCell.xib; sourceTree = "<group>"; };
 		AF6C14E9280C33F400482437 /* SearchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTableViewCell.swift; sourceTree = "<group>"; };
+		AF6C14EB280C599F00482437 /* GitData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitData.swift; sourceTree = "<group>"; };
+		AF6C14ED280C5DD700482437 /* Errors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Errors.swift; sourceTree = "<group>"; };
+		AF6C14EF280C5F7700482437 /* ConnectivityErr.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectivityErr.swift; sourceTree = "<group>"; };
+		AF6C14F1280C8A8500482437 /* CellVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellVM.swift; sourceTree = "<group>"; };
+		AF6C14F3280C9A8D00482437 /* PageController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageController.swift; sourceTree = "<group>"; };
+		AF6C14F5280D937E00482437 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		AFB76D7428076F13003D9365 /* ScalioTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ScalioTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AFB76D7728076F13003D9365 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AFB76D7B28076F13003D9365 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -115,6 +127,10 @@
 			children = (
 				AF6C14E0280B066F00482437 /* GitAPI.swift */,
 				AF6C14E2280B19F900482437 /* GitProfileParser.swift */,
+				AF6C14EB280C599F00482437 /* GitData.swift */,
+				AF6C14ED280C5DD700482437 /* Errors.swift */,
+				AF6C14EF280C5F7700482437 /* ConnectivityErr.swift */,
+				AF6C14F3280C9A8D00482437 /* PageController.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -161,6 +177,8 @@
 				AFB76D8528076F16003D9365 /* Info.plist */,
 				AF6C14E7280C322100482437 /* userCell.xib */,
 				AF6C14E9280C33F400482437 /* SearchTableViewCell.swift */,
+				AF6C14F1280C8A8500482437 /* CellVM.swift */,
+				AF6C14F5280D937E00482437 /* HomeViewModel.swift */,
 			);
 			path = ScalioTest;
 			sourceTree = "<group>";
@@ -431,9 +449,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AF6C14F0280C5F7700482437 /* ConnectivityErr.swift in Sources */,
 				AFB76D7C28076F13003D9365 /* HomeViewController.swift in Sources */,
+				AF6C14F4280C9A8D00482437 /* PageController.swift in Sources */,
+				AF6C14F2280C8A8500482437 /* CellVM.swift in Sources */,
 				AF6C14E1280B066F00482437 /* GitAPI.swift in Sources */,
+				AF6C14EC280C599F00482437 /* GitData.swift in Sources */,
 				AF6C14E6280B1DBF00482437 /* GitProfileModel.swift in Sources */,
+				AF6C14F6280D937E00482437 /* HomeViewModel.swift in Sources */,
+				AF6C14EE280C5DD700482437 /* Errors.swift in Sources */,
 				AF6C14EA280C33F400482437 /* SearchTableViewCell.swift in Sources */,
 				AFB76D7828076F13003D9365 /* AppDelegate.swift in Sources */,
 				AF6C14E3280B19FA00482437 /* GitProfileParser.swift in Sources */,
