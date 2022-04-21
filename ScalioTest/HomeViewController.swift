@@ -11,16 +11,16 @@ import RxSwift
 
 class HomeViewController: UIViewController {
     
-
     var horizontalStackView = UIStackView()
     var verticalStackView = UIStackView()
-    
+
     let tableView = UITableView()
 
     var viewModel: VCViewModel!
     let disposeBag = DisposeBag()
 
-    
+    let screenSize: CGRect = UIScreen.main.bounds
+
     var activityIndivator: UIActivityIndicatorView!
     var refreshControl: UIRefreshControl!
     
@@ -28,12 +28,18 @@ class HomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.register(SearchTableViewCell.self, forCellReuseIdentifier: "userCell")
-
 //        tableView.dataSource = self
         tableView.delegate = self
+        self.tableView.rowHeight = CGFloat(Int(view.frame.size.height / 9))
+        tableView.keyboardDismissMode = .onDrag
+
         configureSV()
-        
-//        setupSearchBar()
+
+        self.navigationItem.title = "Search in Git Users"
+        self.navigationItem.titleView?.tintColor = UIColor.blue
+        self.navigationItem.titleView?.backgroundColor = UIColor.blue
+
+        //        setupSearchBar()
     }
 
     private func setupNavBar() {
@@ -113,7 +119,7 @@ class HomeViewController: UIViewController {
         horizontalStackView.axis = .horizontal
         verticalStackView.axis = .vertical
         horizontalStackView.spacing = 10
-        verticalStackView.spacing = 20
+        verticalStackView.spacing = 10
 
         setHorizontalSVConstraints()
         setVerticalSVConstraints()
@@ -124,7 +130,8 @@ class HomeViewController: UIViewController {
         horizontalStackView.topAnchor.constraint(equalTo: verticalStackView.topAnchor, constant: 0).isActive = true
         horizontalStackView.leadingAnchor.constraint(equalTo: verticalStackView.leadingAnchor, constant: 0).isActive = true
         horizontalStackView.trailingAnchor.constraint(equalTo: verticalStackView.trailingAnchor, constant: 0).isActive = true
-        horizontalStackView.heightAnchor.constraint(equalToConstant: 70)
+        
+//        horizontalStackView.heightAnchor.constraint(equalToConstant: screenSize.height/5)
     }
     
     func setVerticalSVConstraints() {
@@ -149,15 +156,19 @@ class HomeViewController: UIViewController {
     
     @objc func submitTapped() {
         setupSearchBar()
+        logInText.resignFirstResponder()
         configureTableView()
         setupNavBar()
     }
     
     lazy var logInText: UITextField = {
         let login = UITextField()
-        login.placeholder = "Search"
-        login.textColor = .secondaryLabel
-        login.backgroundColor = .purple
+        login.placeholder = "  Search"
+        login.textColor = .black
+        login.backgroundColor = .white
+//        login.layer.borderColor = UIColor.black.cgColor
+//        login.layer.borderWidth = 1
+        login.layer.cornerRadius = 10
         return login
     }()
     
@@ -165,7 +176,15 @@ class HomeViewController: UIViewController {
     @objc func submitButton()-> UIButton {
         let submit = UIButton()
         submit.setTitle("Submit", for: .normal)
-        submit.backgroundColor = .yellow
+        submit.backgroundColor = .white
+        submit.setTitleColor(.black, for: .normal)
+        submit.contentEdgeInsets = UIEdgeInsets(top: 5,left: 5,bottom: 5,right: 5)
+
+//        submit.layer.borderWidth = 1
+//        submit.layer.borderColor = UIColor.black.cgColor
+        submit.layer.cornerRadius = 10
+
+        
         submit.addTarget(self, action: #selector(HomeViewController.submitTapped), for: .touchUpInside)
         return submit
     }
