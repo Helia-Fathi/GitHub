@@ -9,7 +9,7 @@ import Foundation
 
 
 struct UserModel: Equatable {
-    let name: String
+    let login: String
     let type: String
     let imageURL: URL
 }
