@@ -36,7 +36,7 @@ class VCViewModelImpl: VCViewModel {
     
     private let pagingController: PagingController
     private var loadingRelay = BehaviorRelay<Bool>(value:false)
-    private let dataStore: GitDatas
+    private let dataStore: GitData
     private let disposeBag = DisposeBag()
     private let modelsBehaviourRelay: BehaviorRelay<[CellVM]>
     
@@ -45,7 +45,7 @@ class VCViewModelImpl: VCViewModel {
     }
     
     init(
-        dataStore: GitDatas,
+        dataStore: GitData,
         loaderSubject: PublishSubject<Bool> = PublishSubject<Bool>(),
         errorSubject: PublishSubject<String> = PublishSubject<String>(),
         modelsBehaviour: BehaviorRelay<[CellVM]> = BehaviorRelay<[CellVM]>(value: []),
