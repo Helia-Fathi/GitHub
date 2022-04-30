@@ -27,6 +27,7 @@ class HomeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        view.backgroundColor = UIColor.secondarySystemBackground
         tableView.register(SearchTableViewCell.self, forCellReuseIdentifier: "userCell")
 //        tableView.dataSource = self
         tableView.delegate = self
@@ -34,12 +35,12 @@ class HomeViewController: UIViewController {
         tableView.keyboardDismissMode = .onDrag
 
         configureSV()
+        setupNavBar()
+//        setupSearchBar()
+        bindViewModel()
 
-        self.navigationItem.title = "Search in Git Users"
-        self.navigationItem.titleView?.tintColor = UIColor.blue
-        self.navigationItem.titleView?.backgroundColor = UIColor.blue
-
-        //        setupSearchBar()
+        self.navigationItem.title = "Search in Git Users Names"
+        
     }
 
     private func setupNavBar() {
@@ -55,6 +56,7 @@ class HomeViewController: UIViewController {
     }
     
     private func bindTableView() {
+        tableView.dataSource = nil
         tableView.refreshControl?.rx.controlEvent(.valueChanged).subscribe(onNext: {[weak self] _ in
             if self?.tableView.refreshControl?.isRefreshing ?? false {
                 self?.viewModel.pullToRefresh()
@@ -73,18 +75,40 @@ class HomeViewController: UIViewController {
     
     
     private func setupSearchBar() {
-        logInText.rx.text.orEmpty
-            .debounce(.milliseconds(500), scheduler: MainScheduler.instance)
-            .subscribe(onNext: {[weak self] searchString in
-                guard let self = self else {return}
-                self.viewModel.searchString = searchString+" in:login"
-            })
-            .disposed(by: disposeBag)
+        
+        
+        
+//        print("this is when you change the string")
+//        submitButton.rx.tap.bind { [weak self] in
+//
+//            guard let self = self else {return}
+//            self.viewModel.searchString = searchString +" in:login"
+//            print("this is when you change the strings")
+            
+            
+//                .debounce(.milliseconds(500), scheduler: MainScheduler.instance)
+//                .subscribe(onNext: {[weak self] searchString in
+//                    guard let self = self else {return}
+//                    self.viewModel.searchString = searchString +" in:login"
+//                    print("this is when you change the strings")
+                
+//        .disposed(by: disposeBag)
+        
+//        logInText.rx.text.orEmpty
+//            .debounce(.milliseconds(500), scheduler: MainScheduler.instance)
+//            .subscribe(onNext: {[weak self] searchString in
+//                guard let self = self else {return}
+//                self.viewModel.searchString = searchString+" in:login"
+//                print("this is when you change the string")
+//            })
+//            .disposed(by: disposeBag)
     }
     
+    
+    
     private func bindViewModel(){
-        viewModel.loaderSubject.bind(to: activityIndivator.rx.isAnimating)
-            .disposed(by: disposeBag)
+//        viewModel.loaderSubject.bind(to: activityIndivator.rx.isAnimating)
+//            .disposed(by: disposeBag)
         
         
         viewModel.errorSubject.subscribe(onNext: {[weak self] error in
@@ -144,7 +168,7 @@ class HomeViewController: UIViewController {
 
     func addTextFieldandButton() {
         horizontalStackView.addArrangedSubview(logInText)
-        horizontalStackView.addArrangedSubview(submitButton())
+        horizontalStackView.addArrangedSubview(submitButton)
     }
     
     func addTableView() {
@@ -153,12 +177,26 @@ class HomeViewController: UIViewController {
     }
     
    
-    
+  //MARK: - this is the button
     @objc func submitTapped() {
-        setupSearchBar()
+//        setupSearchBar()
+//        logInText.rx.text.orEmpty
+//            .debounce(.milliseconds(500), scheduler: MainScheduler.instance)
+//                    .subscribe(onNext: {[weak self] searchString in
+//                        guard let self = self else {return}
+//
+//                        self.viewModel.searchString = searchString+" in:login"
+//                        print("this is when you change the string")
+//
+//                    }).disposed(by: disposeBag)
+        
+        
+        
+        self.viewModel.searchString = logInText.text! + " in:login"
+
         logInText.resignFirstResponder()
         configureTableView()
-        setupNavBar()
+//        setupNavBar()
     }
     
     lazy var logInText: UITextField = {
@@ -166,6 +204,8 @@ class HomeViewController: UIViewController {
         login.placeholder = "  Search"
         login.textColor = .black
         login.backgroundColor = .white
+        login.autocorrectionType = .no
+
 //        login.layer.borderColor = UIColor.black.cgColor
 //        login.layer.borderWidth = 1
         login.layer.cornerRadius = 10
@@ -173,7 +213,7 @@ class HomeViewController: UIViewController {
     }()
     
     
-    @objc func submitButton()-> UIButton {
+    lazy var submitButton: UIButton = {
         let submit = UIButton()
         submit.setTitle("Submit", for: .normal)
         submit.backgroundColor = .white
@@ -187,7 +227,7 @@ class HomeViewController: UIViewController {
         
         submit.addTarget(self, action: #selector(HomeViewController.submitTapped), for: .touchUpInside)
         return submit
-    }
+    }()
 }
 
 
@@ -213,3 +253,4 @@ extension HomeViewController: UITableViewDelegate {
    
     
 }
+

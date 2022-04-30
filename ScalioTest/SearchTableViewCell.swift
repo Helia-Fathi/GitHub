@@ -32,6 +32,7 @@ class SearchTableViewCell: UITableViewCell {
          n.textColor = UIColor.darkGray
         n.textAlignment = .center
 //        n.backgroundColor = .purple
+        
          n.text = "Testing 123"
          n.font = UIFont(name: "Montserrat", size: 30)
      return n

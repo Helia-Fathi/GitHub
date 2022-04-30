@@ -16,7 +16,7 @@ final class GitProfileParser {
     static func map(_ response: Response) throws -> Single<[UserModel]> {
         if response.statusCode == 200, let root = try? JSONDecoder().decode(GitHubProfileRoot.self, from: response.data) {
             return Single.create { single in
-                single(.success(root.profileModels))
+                single(.success(root.sortedProfileModel))
                 return Disposables.create()
             }
         }
@@ -27,8 +27,19 @@ final class GitProfileParser {
         private let items: [GitProfile]
         
         var profileModels: [UserModel] {
-            items.map { $0.profileModel}
+
+            items.map {
+                return $0.profileModel
+             }
         }
+        
+        var sortedProfileModel: [UserModel] {
+            
+            profileModels.sorted {
+                return $0.login.lowercased() < $1.login.lowercased()
+            }
+        }
+        
         
         private struct GitProfile: Decodable {
             let login: String

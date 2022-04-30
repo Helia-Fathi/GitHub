@@ -50,7 +50,7 @@ class VCViewModelImpl: VCViewModel {
         errorSubject: PublishSubject<String> = PublishSubject<String>(),
         modelsBehaviour: BehaviorRelay<[CellVM]> = BehaviorRelay<[CellVM]>(value: []),
         pagingController: PagingController =  PagingController(),
-        navTitle: String = "Search Github Profiles"
+        navTitle: String = "Search in Github Users Names"
     ){
         self.dataStore = dataStore
         self.loaderSubject = loaderSubject
