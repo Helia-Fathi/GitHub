@@ -140,7 +140,7 @@ class ScalioTestTests: XCTestCase {
     func testExampleVM7() {
 //connection error
         let data = GitHubDataStore()
-        data.stubbedError = Errors.connectivity
+        data.stubbedError = Errors.limitedness
         
         let errorSubject = PublishSubject<String>()
         
@@ -148,7 +148,7 @@ class ScalioTestTests: XCTestCase {
         
         errorSubject.asObservable()
             .subscribe { message in
-                XCTAssertEqual(message, Errors.connectivity.message)
+                XCTAssertEqual(message, Errors.limitedness.message)
                 expectation.fulfill()
             } onError: { _ in}
             .disposed(by: disposeBag)
@@ -264,7 +264,7 @@ class ScalioTestTests: XCTestCase {
                         XCTFail("Expected to fail with API Error connectivity error")
                         return
                     }
-                    XCTAssertEqual(Errors.connectivity, error)
+                    XCTAssertEqual(Errors.limitedness, error)
                     expectation.fulfill()
                 }
                 .disposed(by: disposeBag)

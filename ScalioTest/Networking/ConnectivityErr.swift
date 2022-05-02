@@ -14,7 +14,7 @@ extension PrimitiveSequence where Trait == SingleTrait, Element == Response {
     func connectivityError() -> Single<Element> {
         return flatMap { response in
             guard 200..<300 ~= response.statusCode else {
-                throw Errors.connectivity
+                throw Errors.limitedness
             }
             return .just(response)
         }

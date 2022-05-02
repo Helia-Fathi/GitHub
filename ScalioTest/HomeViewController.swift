@@ -31,20 +31,30 @@ class HomeViewController: UIViewController {
         tableView.register(SearchTableViewCell.self, forCellReuseIdentifier: "userCell")
 //        tableView.dataSource = self
         tableView.delegate = self
-        self.tableView.rowHeight = CGFloat(Int(view.frame.size.height / 9))
+        let top = view.safeAreaInsets.top
+        let bottom = view.safeAreaInsets.bottom
+
+        self.tableView.rowHeight = CGFloat(Int((view.frame.size.height) - (top + bottom + 30) ) / 11)
+//        self.tableView.rowHeight = view.frame.size.height
+        tableView.backgroundColor = .clear
         tableView.keyboardDismissMode = .onDrag
 
+        
+//        print("this the heigh for the text: \(view.frame.size.height)")
+        
+        
         configureSV()
         setupNavBar()
 //        setupSearchBar()
         bindViewModel()
 
-        self.navigationItem.title = "Search in Git Users Names"
+//        self.navigationItem.title = "Search in Git Users Names"
         
     }
 
     private func setupNavBar() {
         navigationItem.title = viewModel.navTitle
+        navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.font: UIFont(name: "Dongle-Regular", size: 30)!]
         activityIndivator = UIActivityIndicatorView()
         navigationItem.rightBarButtonItem = UIBarButtonItem(customView: activityIndivator)
     }
@@ -68,6 +78,9 @@ class HomeViewController: UIViewController {
             .bind(to: tableView.rx.items) { (tableView: UITableView, index: Int, cellVM: CellVM) in
                 guard let cell = tableView.dequeueReusableCell(withIdentifier: "userCell", for: IndexPath(row: index, section: 0)) as? SearchTableViewCell else { return UITableViewCell()}
                 cell.configure(viewModel: cellVM)
+                cell.backgroundColor = .clear
+                cell.selectionStyle = .none
+
                 return cell
             }.disposed(by: disposeBag)
     }
@@ -107,8 +120,8 @@ class HomeViewController: UIViewController {
     
     
     private func bindViewModel(){
-//        viewModel.loaderSubject.bind(to: activityIndivator.rx.isAnimating)
-//            .disposed(by: disposeBag)
+        viewModel.loaderSubject.bind(to: activityIndivator.rx.isAnimating)
+            .disposed(by: disposeBag)
         
         
         viewModel.errorSubject.subscribe(onNext: {[weak self] error in
@@ -161,8 +174,8 @@ class HomeViewController: UIViewController {
     func setVerticalSVConstraints() {
         verticalStackView.translatesAutoresizingMaskIntoConstraints = false
         verticalStackView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 0).isActive = true
-        verticalStackView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 0).isActive = true
-        verticalStackView.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: 0).isActive = true
+        verticalStackView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 16).isActive = true
+        verticalStackView.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -16).isActive = true
         verticalStackView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: 0).isActive = true
     }
 
@@ -206,6 +219,7 @@ class HomeViewController: UIViewController {
         login.backgroundColor = .white
         login.autocorrectionType = .no
 
+        login.font = UIFont(name: "Dongle-Regular", size: 30)
 //        login.layer.borderColor = UIColor.black.cgColor
 //        login.layer.borderWidth = 1
         login.layer.cornerRadius = 10
@@ -216,10 +230,14 @@ class HomeViewController: UIViewController {
     lazy var submitButton: UIButton = {
         let submit = UIButton()
         submit.setTitle("Submit", for: .normal)
+        submit.titleLabel?.font = UIFont(name: "Dongle-Bold", size: 20)
         submit.backgroundColor = .white
         submit.setTitleColor(.black, for: .normal)
         submit.contentEdgeInsets = UIEdgeInsets(top: 5,left: 5,bottom: 5,right: 5)
 
+        submit.layer.shadowRadius = 20
+        submit.layer.opacity = 1
+        submit.layer.shadowColor = UIColor.blue.cgColor
 //        submit.layer.borderWidth = 1
 //        submit.layer.borderColor = UIColor.black.cgColor
         submit.layer.cornerRadius = 10
@@ -235,10 +253,13 @@ extension HomeViewController: UITableViewDelegate {
     
         func scrollViewDidScroll(_ scrollView: UIScrollView) {
             guard scrollView.isDragging else {return}
-            if scrollView.contentOffset.y > 0 && (scrollView.contentOffset.y + scrollView.frame.size.height) > scrollView.contentSize.height {
+            if scrollView.contentOffset.y > 0 && (scrollView.contentOffset.y + scrollView.frame.size.height) > scrollView.contentSize.height + 50 {
                 
-  
+                if activityIndivator.isAnimating {
+                    return
+                } else {
                 viewModel.nextPage()
+                }
             }
         }
     

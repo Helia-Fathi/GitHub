@@ -9,14 +9,16 @@
 import Foundation
 
 enum Errors: Error {
-    case connectivity, invalidData
+    case limitedness, invalidData, connectivity
     
     var message: String {
         switch self {
+        case .limitedness:
+            return "Please count to 45 mississippily then try scrolling. "
         case .connectivity:
-            return "Failed to connect. Please check internet connection."
+            return "Please check internet connection."
         case .invalidData:
-            return "Some error occured. Try again later."
+            return "Try again later."
         }
     }
 }
