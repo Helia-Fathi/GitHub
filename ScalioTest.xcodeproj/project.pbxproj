@@ -7,10 +7,27 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		028BE264BB9BA223DA964B40 /* Pods_ScalioTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 506662C5AE80EFDA9DA07F0A /* Pods_ScalioTest.framework */; };
+		2A0CF391629DEA64AE76C5ED /* Pods_ScalioTest_ScalioTestUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 31FC2B593362D0BE6B6709A2 /* Pods_ScalioTest_ScalioTestUITests.framework */; };
+		909190B183F67D28F790229F /* Pods_ScalioTestTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23C9E5C7A5E9A968D23130E0 /* Pods_ScalioTestTests.framework */; };
+		AF0421B128227276001DF919 /* NetworkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF0421B028227276001DF919 /* NetworkTests.swift */; };
+		AF6C14E1280B066F00482437 /* GitAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6C14E0280B066F00482437 /* GitAPI.swift */; };
+		AF6C14E3280B19FA00482437 /* GitProfileParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6C14E2280B19F900482437 /* GitProfileParser.swift */; };
+		AF6C14E6280B1DBF00482437 /* GitProfileModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6C14E5280B1DBF00482437 /* GitProfileModel.swift */; };
+		AF6C14E8280C322200482437 /* userCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF6C14E7280C322100482437 /* userCell.xib */; };
+		AF6C14EA280C33F400482437 /* ResultTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6C14E9280C33F400482437 /* ResultTableViewCell.swift */; };
+		AF6C14EC280C599F00482437 /* GitData.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6C14EB280C599F00482437 /* GitData.swift */; };
+		AF6C14EE280C5DD700482437 /* Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6C14ED280C5DD700482437 /* Errors.swift */; };
+		AF6C14F0280C5F7700482437 /* ConnectivityErr.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6C14EF280C5F7700482437 /* ConnectivityErr.swift */; };
+		AF6C14F2280C8A8500482437 /* UserCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6C14F1280C8A8500482437 /* UserCellViewModel.swift */; };
+		AF6C14F4280C9A8D00482437 /* PageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6C14F3280C9A8D00482437 /* PageController.swift */; };
+		AF6C14F6280D937E00482437 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6C14F5280D937E00482437 /* HomeViewModel.swift */; };
+		AF748317281DD4A000769A76 /* Dongle-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AF748314281DD49E00769A76 /* Dongle-Regular.ttf */; };
+		AF748318281DD4A000769A76 /* Dongle-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AF748315281DD49F00769A76 /* Dongle-Light.ttf */; };
+		AF748319281DD4A000769A76 /* Dongle-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AF748316281DD49F00769A76 /* Dongle-Bold.ttf */; };
+		AF74831B2820797600769A76 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF74831A2820797500769A76 /* Constants.swift */; };
 		AFB76D7828076F13003D9365 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB76D7728076F13003D9365 /* AppDelegate.swift */; };
-		AFB76D7A28076F13003D9365 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB76D7928076F13003D9365 /* SceneDelegate.swift */; };
-		AFB76D7C28076F13003D9365 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB76D7B28076F13003D9365 /* ViewController.swift */; };
-		AFB76D7F28076F13003D9365 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AFB76D7D28076F13003D9365 /* Main.storyboard */; };
+		AFB76D7C28076F13003D9365 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB76D7B28076F13003D9365 /* HomeViewController.swift */; };
 		AFB76D8128076F16003D9365 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AFB76D8028076F16003D9365 /* Assets.xcassets */; };
 		AFB76D8428076F16003D9365 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AFB76D8228076F16003D9365 /* LaunchScreen.storyboard */; };
 		AFB76D8F28076F17003D9365 /* ScalioTestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB76D8E28076F17003D9365 /* ScalioTestTests.swift */; };
@@ -36,11 +53,33 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		23C9E5C7A5E9A968D23130E0 /* Pods_ScalioTestTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ScalioTestTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		31FC2B593362D0BE6B6709A2 /* Pods_ScalioTest_ScalioTestUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ScalioTest_ScalioTestUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		34D444B1C8A12011E8E4D0C3 /* Pods-ScalioTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ScalioTest.release.xcconfig"; path = "Target Support Files/Pods-ScalioTest/Pods-ScalioTest.release.xcconfig"; sourceTree = "<group>"; };
+		3B7799FD1CA617FDBFD234EE /* Pods-ScalioTestTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ScalioTestTests.release.xcconfig"; path = "Target Support Files/Pods-ScalioTestTests/Pods-ScalioTestTests.release.xcconfig"; sourceTree = "<group>"; };
+		4F4DFF2834FDD0CAFCA23B10 /* Pods-ScalioTest-ScalioTestUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ScalioTest-ScalioTestUITests.debug.xcconfig"; path = "Target Support Files/Pods-ScalioTest-ScalioTestUITests/Pods-ScalioTest-ScalioTestUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		506662C5AE80EFDA9DA07F0A /* Pods_ScalioTest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ScalioTest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6B3F22A94B8B6DA5E441236F /* Pods-ScalioTest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ScalioTest.debug.xcconfig"; path = "Target Support Files/Pods-ScalioTest/Pods-ScalioTest.debug.xcconfig"; sourceTree = "<group>"; };
+		9A11E9013C25EB39BCD072BC /* Pods-ScalioTest-ScalioTestUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ScalioTest-ScalioTestUITests.release.xcconfig"; path = "Target Support Files/Pods-ScalioTest-ScalioTestUITests/Pods-ScalioTest-ScalioTestUITests.release.xcconfig"; sourceTree = "<group>"; };
+		AF0421B028227276001DF919 /* NetworkTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkTests.swift; sourceTree = "<group>"; };
+		AF6C14E0280B066F00482437 /* GitAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitAPI.swift; sourceTree = "<group>"; };
+		AF6C14E2280B19F900482437 /* GitProfileParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitProfileParser.swift; sourceTree = "<group>"; };
+		AF6C14E5280B1DBF00482437 /* GitProfileModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitProfileModel.swift; sourceTree = "<group>"; };
+		AF6C14E7280C322100482437 /* userCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = userCell.xib; sourceTree = "<group>"; };
+		AF6C14E9280C33F400482437 /* ResultTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultTableViewCell.swift; sourceTree = "<group>"; };
+		AF6C14EB280C599F00482437 /* GitData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitData.swift; sourceTree = "<group>"; };
+		AF6C14ED280C5DD700482437 /* Errors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Errors.swift; sourceTree = "<group>"; };
+		AF6C14EF280C5F7700482437 /* ConnectivityErr.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectivityErr.swift; sourceTree = "<group>"; };
+		AF6C14F1280C8A8500482437 /* UserCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCellViewModel.swift; sourceTree = "<group>"; };
+		AF6C14F3280C9A8D00482437 /* PageController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageController.swift; sourceTree = "<group>"; };
+		AF6C14F5280D937E00482437 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		AF748314281DD49E00769A76 /* Dongle-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Dongle-Regular.ttf"; sourceTree = "<group>"; };
+		AF748315281DD49F00769A76 /* Dongle-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Dongle-Light.ttf"; sourceTree = "<group>"; };
+		AF748316281DD49F00769A76 /* Dongle-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Dongle-Bold.ttf"; sourceTree = "<group>"; };
+		AF74831A2820797500769A76 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		AFB76D7428076F13003D9365 /* ScalioTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ScalioTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AFB76D7728076F13003D9365 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		AFB76D7928076F13003D9365 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		AFB76D7B28076F13003D9365 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		AFB76D7E28076F13003D9365 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		AFB76D7B28076F13003D9365 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		AFB76D8028076F16003D9365 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AFB76D8328076F16003D9365 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AFB76D8528076F16003D9365 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -49,6 +88,7 @@
 		AFB76D9428076F17003D9365 /* ScalioTestUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ScalioTestUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AFB76D9828076F17003D9365 /* ScalioTestUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScalioTestUITests.swift; sourceTree = "<group>"; };
 		AFB76D9A28076F17003D9365 /* ScalioTestUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScalioTestUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		FDBEF53E81F884A28CE29A26 /* Pods-ScalioTestTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ScalioTestTests.debug.xcconfig"; path = "Target Support Files/Pods-ScalioTestTests/Pods-ScalioTestTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +96,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				028BE264BB9BA223DA964B40 /* Pods_ScalioTest.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +104,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				909190B183F67D28F790229F /* Pods_ScalioTestTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -70,12 +112,110 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2A0CF391629DEA64AE76C5ED /* Pods_ScalioTest_ScalioTestUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		36110A0E125ECA0325148D44 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				6B3F22A94B8B6DA5E441236F /* Pods-ScalioTest.debug.xcconfig */,
+				34D444B1C8A12011E8E4D0C3 /* Pods-ScalioTest.release.xcconfig */,
+				4F4DFF2834FDD0CAFCA23B10 /* Pods-ScalioTest-ScalioTestUITests.debug.xcconfig */,
+				9A11E9013C25EB39BCD072BC /* Pods-ScalioTest-ScalioTestUITests.release.xcconfig */,
+				FDBEF53E81F884A28CE29A26 /* Pods-ScalioTestTests.debug.xcconfig */,
+				3B7799FD1CA617FDBFD234EE /* Pods-ScalioTestTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		AF0421A828226AC8001DF919 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				AF0421AB28226B17001DF919 /* Components */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		AF0421AB28226B17001DF919 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				AFB76D7B28076F13003D9365 /* HomeViewController.swift */,
+				AF0421AC28226B42001DF919 /* SearchComponent */,
+				AF0421AD28226B4F001DF919 /* ResultsComponent */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		AF0421AC28226B42001DF919 /* SearchComponent */ = {
+			isa = PBXGroup;
+			children = (
+				AF6C14F5280D937E00482437 /* HomeViewModel.swift */,
+			);
+			path = SearchComponent;
+			sourceTree = "<group>";
+		};
+		AF0421AD28226B4F001DF919 /* ResultsComponent */ = {
+			isa = PBXGroup;
+			children = (
+				AF6C14F1280C8A8500482437 /* UserCellViewModel.swift */,
+				AF6C14E9280C33F400482437 /* ResultTableViewCell.swift */,
+				AF6C14E7280C322100482437 /* userCell.xib */,
+			);
+			path = ResultsComponent;
+			sourceTree = "<group>";
+		};
+		AF0421AE28226CA3001DF919 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				AF74831A2820797500769A76 /* Constants.swift */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
+		AF0421AF28226CD5001DF919 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				AFB76D8028076F16003D9365 /* Assets.xcassets */,
+				AF748313281DD35E00769A76 /* Fonts */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		AF6C14DF280B062D00482437 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				AF6C14E0280B066F00482437 /* GitAPI.swift */,
+				AF6C14E2280B19F900482437 /* GitProfileParser.swift */,
+				AF6C14EB280C599F00482437 /* GitData.swift */,
+				AF6C14ED280C5DD700482437 /* Errors.swift */,
+				AF6C14EF280C5F7700482437 /* ConnectivityErr.swift */,
+				AF6C14F3280C9A8D00482437 /* PageController.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		AF6C14E4280B1D6B00482437 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				AF6C14E5280B1DBF00482437 /* GitProfileModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		AF748313281DD35E00769A76 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				AF748316281DD49F00769A76 /* Dongle-Bold.ttf */,
+				AF748315281DD49F00769A76 /* Dongle-Light.ttf */,
+				AF748314281DD49E00769A76 /* Dongle-Regular.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
 		AFB76D6B28076F13003D9365 = {
 			isa = PBXGroup;
 			children = (
@@ -83,6 +223,8 @@
 				AFB76D8D28076F17003D9365 /* ScalioTestTests */,
 				AFB76D9728076F17003D9365 /* ScalioTestUITests */,
 				AFB76D7528076F13003D9365 /* Products */,
+				36110A0E125ECA0325148D44 /* Pods */,
+				D5BFED6314A500D99FAC9AAE /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -99,11 +241,12 @@
 		AFB76D7628076F13003D9365 /* ScalioTest */ = {
 			isa = PBXGroup;
 			children = (
+				AF0421AF28226CD5001DF919 /* Utils */,
+				AF0421AE28226CA3001DF919 /* Constants */,
+				AF0421A828226AC8001DF919 /* UI */,
+				AF6C14E4280B1D6B00482437 /* Model */,
+				AF6C14DF280B062D00482437 /* Networking */,
 				AFB76D7728076F13003D9365 /* AppDelegate.swift */,
-				AFB76D7928076F13003D9365 /* SceneDelegate.swift */,
-				AFB76D7B28076F13003D9365 /* ViewController.swift */,
-				AFB76D7D28076F13003D9365 /* Main.storyboard */,
-				AFB76D8028076F16003D9365 /* Assets.xcassets */,
 				AFB76D8228076F16003D9365 /* LaunchScreen.storyboard */,
 				AFB76D8528076F16003D9365 /* Info.plist */,
 			);
@@ -114,6 +257,7 @@
 			isa = PBXGroup;
 			children = (
 				AFB76D8E28076F17003D9365 /* ScalioTestTests.swift */,
+				AF0421B028227276001DF919 /* NetworkTests.swift */,
 			);
 			path = ScalioTestTests;
 			sourceTree = "<group>";
@@ -127,6 +271,16 @@
 			path = ScalioTestUITests;
 			sourceTree = "<group>";
 		};
+		D5BFED6314A500D99FAC9AAE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				506662C5AE80EFDA9DA07F0A /* Pods_ScalioTest.framework */,
+				31FC2B593362D0BE6B6709A2 /* Pods_ScalioTest_ScalioTestUITests.framework */,
+				23C9E5C7A5E9A968D23130E0 /* Pods_ScalioTestTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -134,9 +288,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = AFB76D9E28076F17003D9365 /* Build configuration list for PBXNativeTarget "ScalioTest" */;
 			buildPhases = (
+				7DA555712B795CC6654E1988 /* [CP] Check Pods Manifest.lock */,
 				AFB76D7028076F13003D9365 /* Sources */,
 				AFB76D7128076F13003D9365 /* Frameworks */,
 				AFB76D7228076F13003D9365 /* Resources */,
+				D49F4B9C2DAB4D9A91079359 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -151,6 +307,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = AFB76DA128076F17003D9365 /* Build configuration list for PBXNativeTarget "ScalioTestTests" */;
 			buildPhases = (
+				D0704289C8EE225FB2DC7468 /* [CP] Check Pods Manifest.lock */,
 				AFB76D8628076F17003D9365 /* Sources */,
 				AFB76D8728076F17003D9365 /* Frameworks */,
 				AFB76D8828076F17003D9365 /* Resources */,
@@ -169,9 +326,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = AFB76DA428076F17003D9365 /* Build configuration list for PBXNativeTarget "ScalioTestUITests" */;
 			buildPhases = (
+				BFC5652BA4B5570296928680 /* [CP] Check Pods Manifest.lock */,
 				AFB76D9028076F17003D9365 /* Sources */,
 				AFB76D9128076F17003D9365 /* Frameworks */,
 				AFB76D9228076F17003D9365 /* Resources */,
+				FC4F34734E6E7C9BAA6F65BF /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -231,9 +390,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AF6C14E8280C322200482437 /* userCell.xib in Resources */,
 				AFB76D8428076F16003D9365 /* LaunchScreen.storyboard in Resources */,
+				AF748319281DD4A000769A76 /* Dongle-Bold.ttf in Resources */,
+				AF748318281DD4A000769A76 /* Dongle-Light.ttf in Resources */,
+				AF748317281DD4A000769A76 /* Dongle-Regular.ttf in Resources */,
 				AFB76D8128076F16003D9365 /* Assets.xcassets in Resources */,
-				AFB76D7F28076F13003D9365 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -253,14 +415,127 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		7DA555712B795CC6654E1988 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ScalioTest-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BFC5652BA4B5570296928680 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ScalioTest-ScalioTestUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D0704289C8EE225FB2DC7468 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ScalioTestTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D49F4B9C2DAB4D9A91079359 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ScalioTest/Pods-ScalioTest-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ScalioTest/Pods-ScalioTest-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ScalioTest/Pods-ScalioTest-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FC4F34734E6E7C9BAA6F65BF /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ScalioTest-ScalioTestUITests/Pods-ScalioTest-ScalioTestUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ScalioTest-ScalioTestUITests/Pods-ScalioTest-ScalioTestUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ScalioTest-ScalioTestUITests/Pods-ScalioTest-ScalioTestUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		AFB76D7028076F13003D9365 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AFB76D7C28076F13003D9365 /* ViewController.swift in Sources */,
+				AF6C14F0280C5F7700482437 /* ConnectivityErr.swift in Sources */,
+				AFB76D7C28076F13003D9365 /* HomeViewController.swift in Sources */,
+				AF6C14F4280C9A8D00482437 /* PageController.swift in Sources */,
+				AF6C14F2280C8A8500482437 /* UserCellViewModel.swift in Sources */,
+				AF6C14E1280B066F00482437 /* GitAPI.swift in Sources */,
+				AF6C14EC280C599F00482437 /* GitData.swift in Sources */,
+				AF6C14E6280B1DBF00482437 /* GitProfileModel.swift in Sources */,
+				AF74831B2820797600769A76 /* Constants.swift in Sources */,
+				AF6C14F6280D937E00482437 /* HomeViewModel.swift in Sources */,
+				AF6C14EE280C5DD700482437 /* Errors.swift in Sources */,
+				AF6C14EA280C33F400482437 /* ResultTableViewCell.swift in Sources */,
 				AFB76D7828076F13003D9365 /* AppDelegate.swift in Sources */,
-				AFB76D7A28076F13003D9365 /* SceneDelegate.swift in Sources */,
+				AF6C14E3280B19FA00482437 /* GitProfileParser.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -268,6 +543,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AF0421B128227276001DF919 /* NetworkTests.swift in Sources */,
 				AFB76D8F28076F17003D9365 /* ScalioTestTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -297,14 +573,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		AFB76D7D28076F13003D9365 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				AFB76D7E28076F13003D9365 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		AFB76D8228076F16003D9365 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -432,6 +700,7 @@
 		};
 		AFB76D9F28076F17003D9365 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6B3F22A94B8B6DA5E441236F /* Pods-ScalioTest.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -442,9 +711,9 @@
 				INFOPLIST_FILE = ScalioTest/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -460,6 +729,7 @@
 		};
 		AFB76DA028076F17003D9365 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 34D444B1C8A12011E8E4D0C3 /* Pods-ScalioTest.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -470,9 +740,9 @@
 				INFOPLIST_FILE = ScalioTest/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -488,6 +758,7 @@
 		};
 		AFB76DA228076F17003D9365 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FDBEF53E81F884A28CE29A26 /* Pods-ScalioTestTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -508,6 +779,7 @@
 		};
 		AFB76DA328076F17003D9365 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3B7799FD1CA617FDBFD234EE /* Pods-ScalioTestTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -528,6 +800,7 @@
 		};
 		AFB76DA528076F17003D9365 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4F4DFF2834FDD0CAFCA23B10 /* Pods-ScalioTest-ScalioTestUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -546,6 +819,7 @@
 		};
 		AFB76DA628076F17003D9365 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9A11E9013C25EB39BCD072BC /* Pods-ScalioTest-ScalioTestUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;

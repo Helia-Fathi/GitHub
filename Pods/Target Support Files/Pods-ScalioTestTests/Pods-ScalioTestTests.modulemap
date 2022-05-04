@@ -1,0 +1,6 @@
+framework module Pods_ScalioTestTests {
+  umbrella header "Pods-ScalioTestTests-umbrella.h"
+
+  export *
+  module * { export * }
+}
