@@ -13,7 +13,7 @@ protocol VCViewModel {
     var navTitle: String {get}
     var loaderSubject: PublishSubject<Bool> {get}
     var errorSubject: PublishSubject<String> {get}
-    var cellModelObservalble: Observable<[CellVM]> {get}
+    var cellModelObservalble: Observable<[UserCellViewModel]> {get}
     var searchString: String {get set}
     func pullToRefresh()
     func nextPage()
@@ -23,52 +23,54 @@ protocol VCViewModel {
 class VCViewModelImpl: VCViewModel {
     let loaderSubject: PublishSubject<Bool>
     let errorSubject: PublishSubject<String>
-    var cellModelObservalble: Observable<[CellVM]> {
-        modelsBehaviourRelay.asObservable()
+    var cellModelObservalble: Observable<[UserCellViewModel]> {
+    modelsBehaviourRelay.asObservable()
     }
     var searchString: String {
         didSet {
-                reset()
-                search()
+            reset()
+            search()
         }
     }
+
     let navTitle: String
-    
+
     private let pagingController: PagingController
     private var loadingRelay = BehaviorRelay<Bool>(value:false)
     private let dataStore: GitData
     private let disposeBag = DisposeBag()
-    private let modelsBehaviourRelay: BehaviorRelay<[CellVM]>
-    
+    private let modelsBehaviourRelay: BehaviorRelay<[UserCellViewModel]>
+
     var isLoading: Bool {
         loadingRelay.value
     }
-    
+
     init(
         dataStore: GitData,
         loaderSubject: PublishSubject<Bool> = PublishSubject<Bool>(),
         errorSubject: PublishSubject<String> = PublishSubject<String>(),
-        modelsBehaviour: BehaviorRelay<[CellVM]> = BehaviorRelay<[CellVM]>(value: []),
+        modelsBehaviour: BehaviorRelay<[UserCellViewModel]> = BehaviorRelay<[UserCellViewModel]>(value: []),
         pagingController: PagingController =  PagingController(),
-        navTitle: String = "Search in Github Users Names"
+        navTitle: String = K.Strings.navTitle
     ){
         self.dataStore = dataStore
         self.loaderSubject = loaderSubject
         self.errorSubject = errorSubject
         self.modelsBehaviourRelay = modelsBehaviour
-        self.searchString = ""
+        self.searchString = K.Strings.empty
         self.pagingController = pagingController
         self.navTitle = navTitle
-        
+
         loaderSubject.bind(to: loadingRelay).disposed(by: disposeBag)
     }
 
 
-    
+
     func search() {
         if (isLoading || searchString.isEmpty) {
-            return }
-        
+            return
+        }
+
         loaderSubject.onNext(true)
         dataStore.fetchUsers(search: searchString, pageNumber: pagingController.pageNumber, pageSize: pagingController.pageSize)
             .observe(on: MainScheduler.instance)
@@ -87,28 +89,27 @@ class VCViewModelImpl: VCViewModel {
             }
             .disposed(by: disposeBag)
     }
-    
+
     func manageFetchedProfiles(profiles: [UserModel]){
         if profiles.count < self.pagingController.pageSize {
             self.pagingController.isLastPage = true
         }
         modelsBehaviourRelay.accept(modelsBehaviourRelay.value + profiles.map{.init($0)})
     }
-    
+
     func pullToRefresh() {
         reset()
         search()
     }
-    
+
     func reset() {
         pagingController.reset()
         modelsBehaviourRelay.accept([])
     }
-    
+
     func nextPage() {
         if pagingController.nextPage() != nil {
             search()
         }
     }
-    
 }

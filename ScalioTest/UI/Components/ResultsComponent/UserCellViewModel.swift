@@ -8,7 +8,7 @@
 import Foundation
 
 
-struct CellVM {
+struct UserCellViewModel {
     private let profile: UserModel
     
     init(_ profile: UserModel){
