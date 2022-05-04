@@ -10,13 +10,19 @@ import Foundation
 import RxSwift
 import Moya
 
+//  TODO: add connection check
+//  TODO: set custom alerts for each response codes
+
+
 extension PrimitiveSequence where Trait == SingleTrait, Element == Response {
-    func connectivityError() -> Single<Element> {
+    
+    func GitLimmitError() -> Single<Element> {
         return flatMap { response in
-            guard 200..<300 ~= response.statusCode else {
-                throw Errors.connectivity
+            guard K.Dimentions.responseCode.statusCodeSuccess..<K.Dimentions.responseCode.statusCodeFailRangeResponse ~= response.statusCode else {
+                throw Errors.limitedness
             }
             return .just(response)
         }
     }
 }
+

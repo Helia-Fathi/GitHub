@@ -16,14 +16,16 @@ protocol GitData {
 
 
 class GitDatas: GitData {
+
     let provider: MoyaProvider<GitHub>
+    
     init(provider: MoyaProvider<GitHub>) {
         self.provider = provider
     }
-    
+
     func fetchUsers(search: String, pageNumber: Int, pageSize: Int) -> Single<[UserModel]> {
         return provider.rx.request(.searchUsers(query: search, page: pageNumber, pageSize: pageSize))
-            .connectivityError()
+            .GitLimmitError()
             .flatMap { response in
                 return try GitProfileParser.map(response)
             }

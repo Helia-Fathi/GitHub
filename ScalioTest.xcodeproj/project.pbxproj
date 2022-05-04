@@ -10,17 +10,22 @@
 		028BE264BB9BA223DA964B40 /* Pods_ScalioTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 506662C5AE80EFDA9DA07F0A /* Pods_ScalioTest.framework */; };
 		2A0CF391629DEA64AE76C5ED /* Pods_ScalioTest_ScalioTestUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 31FC2B593362D0BE6B6709A2 /* Pods_ScalioTest_ScalioTestUITests.framework */; };
 		909190B183F67D28F790229F /* Pods_ScalioTestTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23C9E5C7A5E9A968D23130E0 /* Pods_ScalioTestTests.framework */; };
+		AF0421B128227276001DF919 /* NetworkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF0421B028227276001DF919 /* NetworkTests.swift */; };
 		AF6C14E1280B066F00482437 /* GitAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6C14E0280B066F00482437 /* GitAPI.swift */; };
 		AF6C14E3280B19FA00482437 /* GitProfileParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6C14E2280B19F900482437 /* GitProfileParser.swift */; };
 		AF6C14E6280B1DBF00482437 /* GitProfileModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6C14E5280B1DBF00482437 /* GitProfileModel.swift */; };
 		AF6C14E8280C322200482437 /* userCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF6C14E7280C322100482437 /* userCell.xib */; };
-		AF6C14EA280C33F400482437 /* SearchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6C14E9280C33F400482437 /* SearchTableViewCell.swift */; };
+		AF6C14EA280C33F400482437 /* ResultTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6C14E9280C33F400482437 /* ResultTableViewCell.swift */; };
 		AF6C14EC280C599F00482437 /* GitData.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6C14EB280C599F00482437 /* GitData.swift */; };
 		AF6C14EE280C5DD700482437 /* Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6C14ED280C5DD700482437 /* Errors.swift */; };
 		AF6C14F0280C5F7700482437 /* ConnectivityErr.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6C14EF280C5F7700482437 /* ConnectivityErr.swift */; };
-		AF6C14F2280C8A8500482437 /* CellVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6C14F1280C8A8500482437 /* CellVM.swift */; };
+		AF6C14F2280C8A8500482437 /* UserCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6C14F1280C8A8500482437 /* UserCellViewModel.swift */; };
 		AF6C14F4280C9A8D00482437 /* PageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6C14F3280C9A8D00482437 /* PageController.swift */; };
 		AF6C14F6280D937E00482437 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6C14F5280D937E00482437 /* HomeViewModel.swift */; };
+		AF748317281DD4A000769A76 /* Dongle-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AF748314281DD49E00769A76 /* Dongle-Regular.ttf */; };
+		AF748318281DD4A000769A76 /* Dongle-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AF748315281DD49F00769A76 /* Dongle-Light.ttf */; };
+		AF748319281DD4A000769A76 /* Dongle-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AF748316281DD49F00769A76 /* Dongle-Bold.ttf */; };
+		AF74831B2820797600769A76 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF74831A2820797500769A76 /* Constants.swift */; };
 		AFB76D7828076F13003D9365 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB76D7728076F13003D9365 /* AppDelegate.swift */; };
 		AFB76D7C28076F13003D9365 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB76D7B28076F13003D9365 /* HomeViewController.swift */; };
 		AFB76D8128076F16003D9365 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AFB76D8028076F16003D9365 /* Assets.xcassets */; };
@@ -56,17 +61,22 @@
 		506662C5AE80EFDA9DA07F0A /* Pods_ScalioTest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ScalioTest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6B3F22A94B8B6DA5E441236F /* Pods-ScalioTest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ScalioTest.debug.xcconfig"; path = "Target Support Files/Pods-ScalioTest/Pods-ScalioTest.debug.xcconfig"; sourceTree = "<group>"; };
 		9A11E9013C25EB39BCD072BC /* Pods-ScalioTest-ScalioTestUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ScalioTest-ScalioTestUITests.release.xcconfig"; path = "Target Support Files/Pods-ScalioTest-ScalioTestUITests/Pods-ScalioTest-ScalioTestUITests.release.xcconfig"; sourceTree = "<group>"; };
+		AF0421B028227276001DF919 /* NetworkTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkTests.swift; sourceTree = "<group>"; };
 		AF6C14E0280B066F00482437 /* GitAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitAPI.swift; sourceTree = "<group>"; };
 		AF6C14E2280B19F900482437 /* GitProfileParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitProfileParser.swift; sourceTree = "<group>"; };
 		AF6C14E5280B1DBF00482437 /* GitProfileModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitProfileModel.swift; sourceTree = "<group>"; };
 		AF6C14E7280C322100482437 /* userCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = userCell.xib; sourceTree = "<group>"; };
-		AF6C14E9280C33F400482437 /* SearchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTableViewCell.swift; sourceTree = "<group>"; };
+		AF6C14E9280C33F400482437 /* ResultTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultTableViewCell.swift; sourceTree = "<group>"; };
 		AF6C14EB280C599F00482437 /* GitData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitData.swift; sourceTree = "<group>"; };
 		AF6C14ED280C5DD700482437 /* Errors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Errors.swift; sourceTree = "<group>"; };
 		AF6C14EF280C5F7700482437 /* ConnectivityErr.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectivityErr.swift; sourceTree = "<group>"; };
-		AF6C14F1280C8A8500482437 /* CellVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellVM.swift; sourceTree = "<group>"; };
+		AF6C14F1280C8A8500482437 /* UserCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCellViewModel.swift; sourceTree = "<group>"; };
 		AF6C14F3280C9A8D00482437 /* PageController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageController.swift; sourceTree = "<group>"; };
 		AF6C14F5280D937E00482437 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		AF748314281DD49E00769A76 /* Dongle-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Dongle-Regular.ttf"; sourceTree = "<group>"; };
+		AF748315281DD49F00769A76 /* Dongle-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Dongle-Light.ttf"; sourceTree = "<group>"; };
+		AF748316281DD49F00769A76 /* Dongle-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Dongle-Bold.ttf"; sourceTree = "<group>"; };
+		AF74831A2820797500769A76 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		AFB76D7428076F13003D9365 /* ScalioTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ScalioTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AFB76D7728076F13003D9365 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AFB76D7B28076F13003D9365 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -122,6 +132,59 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		AF0421A828226AC8001DF919 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				AF0421AB28226B17001DF919 /* Components */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		AF0421AB28226B17001DF919 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				AFB76D7B28076F13003D9365 /* HomeViewController.swift */,
+				AF0421AC28226B42001DF919 /* SearchComponent */,
+				AF0421AD28226B4F001DF919 /* ResultsComponent */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		AF0421AC28226B42001DF919 /* SearchComponent */ = {
+			isa = PBXGroup;
+			children = (
+				AF6C14F5280D937E00482437 /* HomeViewModel.swift */,
+			);
+			path = SearchComponent;
+			sourceTree = "<group>";
+		};
+		AF0421AD28226B4F001DF919 /* ResultsComponent */ = {
+			isa = PBXGroup;
+			children = (
+				AF6C14F1280C8A8500482437 /* UserCellViewModel.swift */,
+				AF6C14E9280C33F400482437 /* ResultTableViewCell.swift */,
+				AF6C14E7280C322100482437 /* userCell.xib */,
+			);
+			path = ResultsComponent;
+			sourceTree = "<group>";
+		};
+		AF0421AE28226CA3001DF919 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				AF74831A2820797500769A76 /* Constants.swift */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
+		AF0421AF28226CD5001DF919 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				AFB76D8028076F16003D9365 /* Assets.xcassets */,
+				AF748313281DD35E00769A76 /* Fonts */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
 		AF6C14DF280B062D00482437 /* Networking */ = {
 			isa = PBXGroup;
 			children = (
@@ -141,6 +204,16 @@
 				AF6C14E5280B1DBF00482437 /* GitProfileModel.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		AF748313281DD35E00769A76 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				AF748316281DD49F00769A76 /* Dongle-Bold.ttf */,
+				AF748315281DD49F00769A76 /* Dongle-Light.ttf */,
+				AF748314281DD49E00769A76 /* Dongle-Regular.ttf */,
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 		AFB76D6B28076F13003D9365 = {
@@ -168,17 +241,14 @@
 		AFB76D7628076F13003D9365 /* ScalioTest */ = {
 			isa = PBXGroup;
 			children = (
+				AF0421AF28226CD5001DF919 /* Utils */,
+				AF0421AE28226CA3001DF919 /* Constants */,
+				AF0421A828226AC8001DF919 /* UI */,
 				AF6C14E4280B1D6B00482437 /* Model */,
 				AF6C14DF280B062D00482437 /* Networking */,
 				AFB76D7728076F13003D9365 /* AppDelegate.swift */,
-				AFB76D7B28076F13003D9365 /* HomeViewController.swift */,
 				AFB76D8228076F16003D9365 /* LaunchScreen.storyboard */,
-				AFB76D8028076F16003D9365 /* Assets.xcassets */,
 				AFB76D8528076F16003D9365 /* Info.plist */,
-				AF6C14E7280C322100482437 /* userCell.xib */,
-				AF6C14E9280C33F400482437 /* SearchTableViewCell.swift */,
-				AF6C14F1280C8A8500482437 /* CellVM.swift */,
-				AF6C14F5280D937E00482437 /* HomeViewModel.swift */,
 			);
 			path = ScalioTest;
 			sourceTree = "<group>";
@@ -187,6 +257,7 @@
 			isa = PBXGroup;
 			children = (
 				AFB76D8E28076F17003D9365 /* ScalioTestTests.swift */,
+				AF0421B028227276001DF919 /* NetworkTests.swift */,
 			);
 			path = ScalioTestTests;
 			sourceTree = "<group>";
@@ -321,6 +392,9 @@
 			files = (
 				AF6C14E8280C322200482437 /* userCell.xib in Resources */,
 				AFB76D8428076F16003D9365 /* LaunchScreen.storyboard in Resources */,
+				AF748319281DD4A000769A76 /* Dongle-Bold.ttf in Resources */,
+				AF748318281DD4A000769A76 /* Dongle-Light.ttf in Resources */,
+				AF748317281DD4A000769A76 /* Dongle-Regular.ttf in Resources */,
 				AFB76D8128076F16003D9365 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -452,13 +526,14 @@
 				AF6C14F0280C5F7700482437 /* ConnectivityErr.swift in Sources */,
 				AFB76D7C28076F13003D9365 /* HomeViewController.swift in Sources */,
 				AF6C14F4280C9A8D00482437 /* PageController.swift in Sources */,
-				AF6C14F2280C8A8500482437 /* CellVM.swift in Sources */,
+				AF6C14F2280C8A8500482437 /* UserCellViewModel.swift in Sources */,
 				AF6C14E1280B066F00482437 /* GitAPI.swift in Sources */,
 				AF6C14EC280C599F00482437 /* GitData.swift in Sources */,
 				AF6C14E6280B1DBF00482437 /* GitProfileModel.swift in Sources */,
+				AF74831B2820797600769A76 /* Constants.swift in Sources */,
 				AF6C14F6280D937E00482437 /* HomeViewModel.swift in Sources */,
 				AF6C14EE280C5DD700482437 /* Errors.swift in Sources */,
-				AF6C14EA280C33F400482437 /* SearchTableViewCell.swift in Sources */,
+				AF6C14EA280C33F400482437 /* ResultTableViewCell.swift in Sources */,
 				AFB76D7828076F13003D9365 /* AppDelegate.swift in Sources */,
 				AF6C14E3280B19FA00482437 /* GitProfileParser.swift in Sources */,
 			);
@@ -468,6 +543,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AF0421B128227276001DF919 /* NetworkTests.swift in Sources */,
 				AFB76D8F28076F17003D9365 /* ScalioTestTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

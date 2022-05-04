@@ -9,14 +9,17 @@
 import Foundation
 
 enum Errors: Error {
-    case connectivity, invalidData
+    
+    case limitedness, invalidData, connectivity
     
     var message: String {
         switch self {
+        case .limitedness:
+            return K.Strings.Alert.limmitRequestMessage
         case .connectivity:
-            return "Failed to connect. Please check internet connection."
+            return K.Strings.Alert.connectivityMessage
         case .invalidData:
-            return "Some error occured. Try again later."
+            return K.Strings.Alert.invalidDataMessage
         }
     }
 }

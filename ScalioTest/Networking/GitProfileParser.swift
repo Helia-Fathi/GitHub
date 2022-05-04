@@ -12,24 +12,38 @@ import Moya
 final class GitProfileParser {
 
     private init(){}
-    
+
     static func map(_ response: Response) throws -> Single<[UserModel]> {
-        if response.statusCode == 200, let root = try? JSONDecoder().decode(GitHubProfileRoot.self, from: response.data) {
+        
+        if response.statusCode == K.Dimentions.responseCode.statusCodeSuccess, let root = try? JSONDecoder().decode(GitHubProfileRoot.self, from: response.data) {
+         
             return Single.create { single in
-                single(.success(root.profileModels))
+                single(.success(root.sortedProfileModel))
                 return Disposables.create()
             }
         }
         throw Errors.invalidData
     }
-    
+
     private struct GitHubProfileRoot: Decodable {
         private let items: [GitProfile]
-        
+
         var profileModels: [UserModel] {
-            items.map { $0.profileModel}
+
+            items.map {
+                return $0.profileModel
+            }
         }
+
+//  Sorting the users by "login" alphabetically
         
+        var sortedProfileModel: [UserModel] {
+
+            profileModels.sorted {
+                return $0.login.lowercased() < $1.login.lowercased()
+            }
+        }
+
         private struct GitProfile: Decodable {
             let login: String
             let type: String
@@ -40,12 +54,11 @@ final class GitProfileParser {
                 case type = "type"
                 case image = "avatar_url"
             }
-            
+
             var profileModel: UserModel {
-                
+
                 return UserModel(login: self.login, type: self.type, imageURL: self.image)
             }
         }
     }
-    
 }

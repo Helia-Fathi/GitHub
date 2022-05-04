@@ -8,24 +8,25 @@
 import Foundation
 
 class PagingController {
+    
     let pageSize: Int
     var pageNumber: Int
     var isLastPage: Bool
-    
-    init(pageNumber: Int = 1, pageSize: Int = 9, isLastPage: Bool = false) {
+
+    init(pageNumber: Int = K.Dimentions.pageNumber, pageSize: Int = Int(K.Dimentions.pageSize), isLastPage: Bool = K.lastPageDefault) {
         self.pageSize = pageSize
         self.pageNumber = pageNumber
         self.isLastPage = isLastPage
     }
-    
+
     func reset() {
-        pageNumber = 1
-        isLastPage = false
+        pageNumber = K.Dimentions.pageNumber
+        isLastPage = K.lastPageDefault
     }
-    
+
     func nextPage() -> Int? {
         if isLastPage {return nil}
-        pageNumber += 1
+        pageNumber += K.Dimentions.pageNumber
         return pageNumber
     }
 }
